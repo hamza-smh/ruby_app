@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: admin        # replace with your actual PostgreSQL password
+  host: localhost
+
+development:
+  <<: *default
+  database: test_app_development
+
+test:
+  <<: *default
+  database: test_app_test
+
+production:
+  <<: *default
+  database: test_app_production
